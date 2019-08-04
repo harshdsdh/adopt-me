@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development parcel src/index.html ",
-    "predeploy": "rmdir /s /q dist && parcel build src/index.html",
+    "predeploy": "rmdir /s /q dist && parcel build src/index.html --public-url https://harshdsdh.github.io/adopt-me",
     "deploy": "gh-pages -d dist",
     "dev": "parcel src/index.html",
     "dev:mock": "cross-env PET_MOCK=mock npm run dev",
