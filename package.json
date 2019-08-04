@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "cross-env NODE_ENV=development parcel src/index.html ",
+    "predeploy": "rmdir /s /q dist && parcel build src/index.html",
+    "deploy": "gh-pages -d dist",
     "dev": "parcel src/index.html",
     "dev:mock": "cross-env PET_MOCK=mock npm run dev",
     "format": "prettier \"src/**/*.{js,html}\" --write",
@@ -26,6 +29,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.6.1",
+    "gh-pages": "^2.0.1",
     "parcel-bundler": "^1.12.3",
     "prettier": "^1.18.2"
   },
@@ -46,5 +50,6 @@
     "last 2 Edge versions",
     "last 2 Opera versions",
     "last 2 OperaMobile versions"
-  ]
+  ],
+  "homepage": "https://harshdsdh.github.io/adopt-me"
 }
